@@ -60,14 +60,24 @@ export default function Home() {
 
       {/* NAVBAR */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#fdf6ec]/90 backdrop-blur-sm border-b border-[#e8d9c3]">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href="#home">
-            <img src={IMGS.logo} alt="Tanned Co." className="h-14 object-contain" />
+        <div className="max-w-6xl mx-auto px-6 py-2 flex items-center justify-between">
+          {/* Desktop nav left */}
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wider uppercase w-1/3">
+            {navLinks.slice(0, 3).map((l) => (
+              <a key={l.href} href={l.href} className="text-[#5a4a3a] hover:text-[#1a1a1a] transition-colors">
+                {l.label}
+              </a>
+            ))}
+          </div>
+
+          {/* Centred logo */}
+          <a href="#home" className="flex-1 md:flex-none flex justify-center md:justify-center">
+            <img src={IMGS.logo} alt="Tanned Co." className="h-16 md:h-20 object-contain" />
           </a>
 
-          {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wider uppercase">
-            {navLinks.map((l) => (
+          {/* Desktop nav right */}
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wider uppercase w-1/3 justify-end">
+            {navLinks.slice(3).map((l) => (
               <a key={l.href} href={l.href} className="text-[#5a4a3a] hover:text-[#1a1a1a] transition-colors">
                 {l.label}
               </a>
