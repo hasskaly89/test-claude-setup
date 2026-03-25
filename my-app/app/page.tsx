@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 const IMGS = {
-  logo: "https://images.squarespace-cdn.com/content/v1/65cec61119c06337bea7a946/990426c8-4f88-477e-bf0b-02945c710a00/logo-tanned-15-final.png?format=1500w",
+  logo: "https://images.squarespace-cdn.com/content/v1/65cec61119c06337bea7a946/e661168a-a595-4949-a52f-ee0a882cceb9/Untitled+design+%2813%29.png?format=1500w",
   hero: "https://images.squarespace-cdn.com/content/v1/65cec61119c06337bea7a946/b1474ec4-23ae-4f11-9e38-66d88c73ace9/DSCF3371.jpg",
   about: "https://images.squarespace-cdn.com/content/v1/65cec61119c06337bea7a946/c9ff8e92-b68d-4078-8398-61dd12ded903/DSCF3278.jpg",
   booth1: "https://images.squarespace-cdn.com/content/v1/65cec61119c06337bea7a946/fa36c942-482e-468e-b580-694d88148ed1/DSCF2508.jpg",
@@ -404,7 +404,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="bg-[#111] py-8 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <img src={IMGS.logo} alt="Tanned Co." className="h-6 object-contain brightness-0 invert opacity-60" />
+          <img src={IMGS.logo} alt="Tanned Co." className="h-6 object-contain brightness-0 invert opacity-50" />
           <p className="text-white/40 text-xs text-center">© {new Date().getFullYear()} Tanned Co. All rights reserved.</p>
           <a href="https://www.tannedco.com.au/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-white/40 text-xs hover:text-white/60 transition-colors">Privacy Policy</a>
         </div>
