@@ -351,9 +351,9 @@ export default function Home() {
             {/* Locations */}
             <div>
               <h3 className="text-lg font-bold uppercase tracking-widest mb-6 text-[#b08850]">Our Locations</h3>
-              <div className="space-y-4">
+              <div className="space-y-1">
                 {locations.map((loc) => (
-                  <a key={loc.name} href={loc.maps} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 border-b border-white/10 pb-4 hover:bg-white/5 -mx-2 px-2 py-2 rounded-lg transition-colors">
+                  <a key={loc.name} href={loc.maps} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 border-b border-white/10 pb-1 hover:bg-white/5 -mx-2 px-2 py-1 rounded-lg transition-colors">
                     <span className="text-[#b08850] mt-0.5">📍</span>
                     <p className="text-white/80 hover:text-white">{loc.name}</p>
                   </a>
