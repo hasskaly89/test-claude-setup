@@ -160,7 +160,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="bg-[#f5e6cc] rounded-2xl px-6 py-4 text-center">
-                <p className="text-2xl font-black text-[#b08850]">4</p>
+                <p className="text-2xl font-black text-[#b08850]">5</p>
                 <p className="text-xs uppercase tracking-widest text-[#5a4a3a] mt-1">Locations</p>
               </div>
               <div className="bg-[#f5e6cc] rounded-2xl px-6 py-4 text-center">
