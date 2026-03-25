@@ -48,7 +48,8 @@ const locations = [
   "349B Kingsway, Caringbah",
   "Shop 6/207 Edensor Rd, Edensor Park",
   "6/2 Garling Rd, Kings Park",
-  "1/73-77 Anderson Ave, Penrith",
+  "1/73-77 Anderson Rd, Smeaton Grange",
+  "8 Oxford St, Woollahra",
 ];
 
 export default function Home() {
