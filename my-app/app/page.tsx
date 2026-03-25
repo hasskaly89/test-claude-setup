@@ -60,9 +60,9 @@ export default function Home() {
 
       {/* NAVBAR */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#fdf6ec]/90 backdrop-blur-sm border-b border-[#e8d9c3]">
-        <div className="max-w-6xl mx-auto px-6 pt-0 pb-4 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-6 p-0 flex items-center justify-between">
           <a href="#home" className="flex items-center">
-            <img src={IMGS.logo} alt="Tanned Co." className="h-20 object-contain" />
+            <img src={IMGS.logo} alt="Tanned Co." className="h-28 object-contain" />
           </a>
 
           {/* Desktop nav */}
