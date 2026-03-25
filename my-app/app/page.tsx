@@ -62,7 +62,7 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#fdf6ec]/90 backdrop-blur-sm border-b border-[#e8d9c3]">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <a href="#home">
-            <img src={IMGS.logo} alt="Tanned Co." className="h-8 object-contain" />
+            <img src={IMGS.logo} alt="Tanned Co." className="h-14 object-contain" />
           </a>
 
           {/* Desktop nav */}
