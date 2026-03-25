@@ -199,7 +199,7 @@ export default function Home() {
             {[
               { num: "01", title: "Book Online", desc: "Choose your location, date, and preferred tan shade through our easy online booking or app." },
               { num: "02", title: "Step Into Your Booth", desc: "Enter your private tanning room. The booth senses your height and guides you through 4 positions for full coverage." },
-              { num: "03", title: "Walk Out Glowing", desc: "Leave your tan to develop for 6–8 hours, shower, and reveal your beautiful sunkissed glow." },
+              { num: "03", title: "Walk Out Glowing", desc: "Leave your tan to develop for 6–8 hours, shower, and reveal your beautiful sunkissed glow. Short on time? Try our 2-hour rapid clear solution — it goes on clear, develops into a deep sunkissed glow, and washes off after just 2–3 hours." },
             ].map(({ num, title, desc }) => (
               <div key={num} className="border border-white/10 rounded-3xl p-8 hover:border-[#b08850] transition-colors">
                 <p className="text-4xl font-black text-[#b08850] mb-4">{num}</p>
