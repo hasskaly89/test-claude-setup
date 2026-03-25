@@ -129,9 +129,7 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
         <div className="relative z-10 w-full max-w-6xl mx-auto px-6 pb-20 md:pb-28">
-          <h1 className="text-6xl md:text-9xl font-black tracking-tight text-white uppercase leading-none mb-6">
-            Tanned Co.
-          </h1>
+          <img src={IMGS.logo} alt="Tanned Co." className="h-24 md:h-40 object-contain brightness-0 invert mb-6" />
           <p className="text-white/90 text-lg md:text-xl max-w-md mb-8">
             Sydney&apos;s first automated spray tanning studio. Private booths. Perfect results. 7 days a week.
           </p>
