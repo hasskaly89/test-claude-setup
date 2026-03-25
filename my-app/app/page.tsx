@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 const IMGS = {
-  logo: "https://images.squarespace-cdn.com/content/v1/65cec61119c06337bea7a946/e661168a-a595-4949-a52f-ee0a882cceb9/Untitled+design+%2813%29.png?format=1500w",
+  logo: "/logo.png",
   hero: "https://images.squarespace-cdn.com/content/v1/65cec61119c06337bea7a946/b1474ec4-23ae-4f11-9e38-66d88c73ace9/DSCF3371.jpg",
   about: "https://images.squarespace-cdn.com/content/v1/65cec61119c06337bea7a946/c9ff8e92-b68d-4078-8398-61dd12ded903/DSCF3278.jpg",
   booth1: "https://images.squarespace-cdn.com/content/v1/65cec61119c06337bea7a946/fa36c942-482e-468e-b580-694d88148ed1/DSCF2508.jpg",
