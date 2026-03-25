@@ -45,11 +45,11 @@ const faqs = [
 ];
 
 const locations = [
-  "349B Kingsway, Caringbah",
-  "Shop 6/207 Edensor Rd, Edensor Park",
-  "6/2 Garling Rd, Kings Park",
-  "1/73-77 Anderson Rd, Smeaton Grange",
-  "8 Oxford St, Woollahra",
+  { name: "349B Kingsway, Caringbah", maps: "https://www.google.com/maps/search/?api=1&query=349B+Kingsway+Caringbah+NSW" },
+  { name: "Shop 6/207 Edensor Rd, Edensor Park", maps: "https://www.google.com/maps/search/?api=1&query=Shop+6%2F207+Edensor+Rd+Edensor+Park+NSW" },
+  { name: "6/2 Garling Rd, Kings Park", maps: "https://www.google.com/maps/search/?api=1&query=6%2F2+Garling+Rd+Kings+Park+NSW" },
+  { name: "1/73-77 Anderson Rd, Smeaton Grange", maps: "https://www.google.com/maps/search/?api=1&query=1%2F73-77+Anderson+Rd+Smeaton+Grange+NSW" },
+  { name: "8 Oxford St, Woollahra", maps: "https://www.google.com/maps/search/?api=1&query=8+Oxford+St+Woollahra+NSW" },
 ];
 
 export default function Home() {
@@ -353,10 +353,10 @@ export default function Home() {
               <h3 className="text-lg font-bold uppercase tracking-widest mb-6 text-[#b08850]">Our Locations</h3>
               <div className="space-y-4">
                 {locations.map((loc) => (
-                  <div key={loc} className="flex items-start gap-3 border-b border-white/10 pb-4">
+                  <a key={loc.name} href={loc.maps} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 border-b border-white/10 pb-4 hover:bg-white/5 -mx-2 px-2 py-2 rounded-lg transition-colors">
                     <span className="text-[#b08850] mt-0.5">📍</span>
-                    <p className="text-white/80">{loc}</p>
-                  </div>
+                    <p className="text-white/80 hover:text-white">{loc.name}</p>
+                  </a>
                 ))}
               </div>
             </div>
