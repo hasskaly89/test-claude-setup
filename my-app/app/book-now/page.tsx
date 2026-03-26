@@ -21,7 +21,7 @@ export default function BookNow() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white font-sans">
+    <div className="min-h-screen bg-[#1a1a1a] text-white" style={{ fontFamily: "var(--font-geist-sans), sans-serif" }}>
       {/* NAVBAR */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#fdf6ec]/90 backdrop-blur-sm border-b border-[#e8d9c3]">
         <div className="max-w-6xl mx-auto px-6 p-0 flex items-center justify-between">
