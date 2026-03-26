@@ -103,13 +103,14 @@ export default function BookNow() {
         {/* Content overlay */}
         <div className="relative z-10 w-full max-w-4xl mx-auto px-6 flex flex-col items-center gap-6 pt-28">
           {/* Main heading */}
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black uppercase leading-none tracking-tight text-white drop-shadow-lg">
-            Book Your Glow<br />
-            <span className="text-[#f5e6cc]">at Tanned Co</span>
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-black uppercase leading-none tracking-tight text-white drop-shadow-lg text-center">
+            Book Your Glow at
           </h1>
+          {/* Tanned Co logo replacing text */}
+          <img src="/logo_transparent.png" alt="Tanned Co." className="w-full max-w-2xl brightness-0 invert" />
 
           {/* Subtitle */}
-          <p className="text-xl md:text-3xl font-light tracking-widest text-white/90 mt-2">
+          <p className="text-xl md:text-3xl font-light tracking-widest text-white/90">
             Private. Automated. Flawless.
           </p>
 
