@@ -101,33 +101,19 @@ export default function BookNow() {
         <div className="absolute inset-0 bg-black/40" />
 
         {/* Content overlay */}
-        <div className="relative z-10 w-full max-w-3xl mx-auto px-6 flex flex-col items-center pt-28 pb-16">
-          {/* Label */}
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#b08850] mb-6">
-            Book Your Session
-          </p>
-
+        <div className="relative z-10 w-full max-w-2xl mx-auto px-6 flex flex-col items-center justify-center pt-28 pb-20">
           {/* Main heading */}
-          <h1 className="text-4xl md:text-5xl font-black uppercase leading-tight text-white mb-3">
-            Book Your Glow at
+          <h1 className="text-4xl md:text-5xl font-black uppercase leading-tight text-white text-center mb-2">
+            Book Your Glow at<br />Tanned Co
           </h1>
-          {/* Tanned Co logo */}
-          <img src="/logo_transparent.png" alt="Tanned Co." className="w-full max-w-md brightness-0 invert mb-4" />
-
-          {/* Subtitle */}
-          <p className="text-lg md:text-xl font-medium tracking-widest text-white/80 mb-10">
+          <p className="text-base md:text-lg tracking-widest text-white/70 mb-12">
             Private. Automated. Flawless.
           </p>
 
-          {/* Choose location heading */}
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#b08850] mb-3">
-            Step 1
-          </p>
-          <h2 className="text-2xl md:text-3xl font-black uppercase text-white mb-6">
+          {/* Choose location */}
+          <h2 className="text-xl md:text-2xl font-bold text-white mb-6">
             Choose Your Location & Time
           </h2>
-
-          {/* BOOK NOW button */}
           <a
             href="https://tannedco.gymmasteronline.com/portal/book/service?serviceid=211107"
             target="_blank"
@@ -138,23 +124,18 @@ export default function BookNow() {
           </a>
 
           {/* Divider */}
-          <div className="w-12 h-px bg-white/20 my-10" />
+          <div className="w-10 h-px bg-white/20 my-12" />
 
           {/* Download App */}
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#b08850] mb-3">
-            Step 2
-          </p>
-          <h2 className="text-2xl md:text-3xl font-black uppercase text-white mb-6">
-            Download Our App
+          <h2 className="text-xl md:text-2xl font-bold text-white mb-6">
+            Download App
           </h2>
-
-          {/* App buttons */}
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row gap-3 mb-6">
             <a
               href="https://apps.apple.com/us/app/tannedco/id1659547172"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white text-sm font-semibold uppercase tracking-wider px-8 py-3.5 rounded-full border border-white/20 transition-colors"
+              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white text-sm font-medium uppercase tracking-wider px-8 py-3 rounded-full border border-white/20 transition-colors"
             >
               Apple App
             </a>
@@ -162,15 +143,13 @@ export default function BookNow() {
               href="https://play.google.com/store/apps/details?id=com.treshna.memberportal.tannedco"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white text-sm font-semibold uppercase tracking-wider px-8 py-3.5 rounded-full border border-white/20 transition-colors"
+              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white text-sm font-medium uppercase tracking-wider px-8 py-3 rounded-full border border-white/20 transition-colors"
             >
               Android App
             </a>
           </div>
-
-          {/* App description text */}
-          <p className="text-white/60 text-sm max-w-md mt-6 leading-relaxed">
-            Booking a casual session or using your membership is easy, just use the Tanned Co. app. Tap the links to go straight to the booking page.
+          <p className="text-white/50 text-sm max-w-sm text-center leading-relaxed">
+            Booking a casual session or using your membership is easy, just use the Tanned Co. app.
           </p>
         </div>
       </section>
