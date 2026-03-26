@@ -19,6 +19,7 @@ const IMGS = {
 
 const navLinks = [
   { label: "Home", href: "#home" },
+  { label: "Book Now", href: "/book-now" },
   { label: "About", href: "#about" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
@@ -76,9 +77,7 @@ export default function Home() {
           </div>
 
           <a
-            href="https://www.tannedco.com.au/book-now"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/book-now"
             className="hidden md:inline-flex items-center bg-[#1a1a1a] text-white text-sm px-5 py-2.5 rounded-full font-medium hover:bg-[#3a2e24] transition-colors"
           >
             Book Now
@@ -110,9 +109,7 @@ export default function Home() {
               </a>
             ))}
             <a
-              href="https://www.tannedco.com.au/book-now"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/book-now"
               className="mt-2 text-center bg-[#1a1a1a] text-white text-sm px-5 py-3 rounded-full font-medium"
             >
               Book Now
@@ -135,9 +132,7 @@ export default function Home() {
             Sydney&apos;s first automated spray tanning studio. Private booths. Perfect results. 7 days a week.
           </p>
           <a
-            href="https://www.tannedco.com.au/book-now"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/book-now"
             className="inline-flex items-center bg-white text-[#1a1a1a] text-sm md:text-base px-8 py-3.5 rounded-full font-semibold hover:bg-[#f5e6cc] transition-colors"
           >
             Book Your Tan →
