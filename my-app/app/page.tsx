@@ -53,12 +53,141 @@ const locations = [
   { name: "8 Oxford St, Woollahra", maps: "https://www.google.com/maps/search/?api=1&query=8+Oxford+St+Woollahra+NSW" },
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  name: "Tanned Co.",
+  description:
+    "Sydney's first automated spray tanning studio. Private booths, perfect results, open 7 days across 5 locations.",
+  url: "https://www.tannedco.com.au",
+  telephone: "1300826633",
+  email: "hello@tannedco.com.au",
+  image:
+    "https://images.squarespace-cdn.com/content/v1/65cec61119c06337bea7a946/b1474ec4-23ae-4f11-9e38-66d88c73ace9/DSCF3371.jpg",
+  priceRange: "$$",
+  areaServed: {
+    "@type": "City",
+    name: "Sydney",
+  },
+  sameAs: [
+    "https://www.instagram.com/tannedco_",
+    "https://www.tiktok.com/@tannedco_",
+    "https://www.facebook.com/profile.php?id=100086326464692",
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Spray Tan Sessions",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        name: "Casual Tan",
+        price: "35",
+        priceCurrency: "AUD",
+        description: "Single automated spray tan session in a private booth",
+      },
+      {
+        "@type": "Offer",
+        name: "5 Pack",
+        price: "160",
+        priceCurrency: "AUD",
+        description: "5 automated spray tan sessions — $32 per tan",
+      },
+      {
+        "@type": "Offer",
+        name: "10 Pack",
+        price: "300",
+        priceCurrency: "AUD",
+        description: "10 automated spray tan sessions — $30 per tan",
+      },
+    ],
+  },
+  location: [
+    {
+      "@type": "Place",
+      name: "Tanned Co. Caringbah",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "349B Kingsway",
+        addressLocality: "Caringbah",
+        addressRegion: "NSW",
+        addressCountry: "AU",
+      },
+    },
+    {
+      "@type": "Place",
+      name: "Tanned Co. Edensor Park",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Shop 6/207 Edensor Rd",
+        addressLocality: "Edensor Park",
+        addressRegion: "NSW",
+        addressCountry: "AU",
+      },
+    },
+    {
+      "@type": "Place",
+      name: "Tanned Co. Kings Park",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "6/2 Garling Rd",
+        addressLocality: "Kings Park",
+        addressRegion: "NSW",
+        addressCountry: "AU",
+      },
+    },
+    {
+      "@type": "Place",
+      name: "Tanned Co. Smeaton Grange",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "1/73-77 Anderson Rd",
+        addressLocality: "Smeaton Grange",
+        addressRegion: "NSW",
+        addressCountry: "AU",
+      },
+    },
+    {
+      "@type": "Place",
+      name: "Tanned Co. Woollahra",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "8 Oxford St",
+        addressLocality: "Woollahra",
+        addressRegion: "NSW",
+        addressCountry: "AU",
+      },
+    },
+  ],
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.a,
+    },
+  })),
+};
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <div className="min-h-screen bg-[#fdf6ec] text-[#1a1a1a] font-sans">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
 
       {/* NAVBAR */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#fdf6ec]/90 backdrop-blur-sm border-b border-[#e8d9c3]">
@@ -119,10 +248,10 @@ export default function Home() {
       </nav>
 
       {/* HERO */}
-      <section id="home" className="relative h-screen min-h-[600px] flex items-end">
+      <section id="home" aria-label="Welcome to Tanned Co." className="relative h-screen min-h-[600px] flex items-end">
         <img
           src={IMGS.hero}
-          alt="Tanned Co. studio"
+          alt="Inside Tanned Co. automated spray tanning studio in Sydney"
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
@@ -141,7 +270,7 @@ export default function Home() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="py-20 md:py-28">
+      <section id="about" aria-label="About Tanned Co." className="py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#b08850] mb-4">Your Go-To Destination</p>
@@ -170,7 +299,7 @@ export default function Home() {
             </div>
           </div>
           <div className="rounded-3xl overflow-hidden shadow-xl aspect-[4/5]">
-            <img src={IMGS.about} alt="Tanned Co. result" className="w-full h-full object-cover" />
+            <img src={IMGS.about} alt="Woman with a natural sun-kissed spray tan from Tanned Co." className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
@@ -187,7 +316,7 @@ export default function Home() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-20 md:py-28 bg-[#1a1a1a] text-white">
+      <section aria-label="How automated spray tanning works" className="py-20 md:py-28 bg-[#1a1a1a] text-white">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#b08850] mb-4 text-center">Simple & Fast</p>
           <h2 className="text-4xl md:text-5xl font-black uppercase text-center mb-16">How It Works</h2>
@@ -208,7 +337,7 @@ export default function Home() {
       </section>
 
       {/* PRICING */}
-      <section id="pricing" className="py-20 md:py-28 bg-[#fdf0d5]">
+      <section id="pricing" aria-label="Spray tan pricing" className="py-20 md:py-28 bg-[#fdf0d5]">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#b08850] mb-4 text-center">Transparent & Simple</p>
           <h2 className="text-4xl md:text-5xl font-black uppercase text-center mb-4">Our Pricing</h2>
@@ -279,10 +408,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
           <div className="grid grid-cols-2 gap-3">
             <div className="rounded-2xl overflow-hidden aspect-[3/4]">
-              <img src={IMGS.booth1} alt="Tanning booth" className="w-full h-full object-cover" />
+              <img src={IMGS.booth1} alt="Private automated spray tan booth at Tanned Co." className="w-full h-full object-cover" />
             </div>
             <div className="rounded-2xl overflow-hidden aspect-[3/4] mt-8">
-              <img src={IMGS.booth2} alt="Tanning booth result" className="w-full h-full object-cover" />
+              <img src={IMGS.booth2} alt="Client stepping out of a Tanned Co. spray tan booth" className="w-full h-full object-cover" />
             </div>
           </div>
           <div>
@@ -306,7 +435,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="py-20 md:py-28 bg-[#fdf0d5]">
+      <section id="faq" aria-label="Frequently asked questions about spray tanning" className="py-20 md:py-28 bg-[#fdf0d5]">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#b08850] mb-4 text-center">Got Questions?</p>
           <h2 className="text-4xl md:text-5xl font-black uppercase text-center mb-14">FAQ</h2>
@@ -337,7 +466,7 @@ export default function Home() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="py-20 md:py-28 bg-[#1a1a1a] text-white">
+      <section id="contact" aria-label="Contact Tanned Co. and find locations" className="py-20 md:py-28 bg-[#1a1a1a] text-white">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#b08850] mb-4 text-center">Find Us</p>
           <h2 className="text-4xl md:text-5xl font-black uppercase text-center mb-16">Visit Us</h2>
