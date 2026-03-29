@@ -99,6 +99,11 @@ export default function Home() {
                 {label}
               </a>
             ))}
+            <a href="/schedule" style={{ color: "#e1ccbe", fontSize: 11, fontWeight: 900, letterSpacing: "0.18em", textTransform: "uppercase", textDecoration: "none", border: "1.5px solid rgba(225,204,190,0.4)", padding: "6px 14px", borderRadius: 99 }}
+              onMouseEnter={e => { e.currentTarget.style.backgroundColor = "rgba(225,204,190,0.12)"; }}
+              onMouseLeave={e => { e.currentTarget.style.backgroundColor = "transparent"; }}>
+              Schedule
+            </a>
           </div>
 
           <a href="https://clients.mindbodyonline.com/ASP/su1.asp?studioid=5756614" target="_blank" rel="noopener noreferrer" className="desktop-nav"
@@ -119,9 +124,9 @@ export default function Home() {
         {/* Mobile menu */}
         <div style={{ overflow: "hidden", maxHeight: menuOpen ? 480 : 0, transition: "max-height 0.35s ease", backgroundColor: "rgba(12,12,12,0.98)", backdropFilter: "blur(16px)" }} className="mobile-menu">
           <div style={{ padding: "24px 28px", display: "flex", flexDirection: "column", gap: 20 }}>
-            {[["#about","About"],["#classes","Classes"],["#pricing","Pricing"],["#locations","Locations"],["#faq","FAQ"]].map(([href, label]) => (
+            {[["#about","About"],["#classes","Classes"],["#pricing","Pricing"],["#locations","Locations"],["#faq","FAQ"],["/schedule","Schedule ↗"]].map(([href, label]) => (
               <a key={href} href={href} onClick={() => setMenuOpen(false)}
-                style={{ color: "rgba(255,255,255,0.85)", fontSize: 18, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", borderBottom: "1px solid rgba(225,204,190,0.1)", paddingBottom: 16 }}>
+                style={{ color: label.includes("Schedule") ? "#e1ccbe" : "rgba(255,255,255,0.85)", fontSize: 18, fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", borderBottom: "1px solid rgba(225,204,190,0.1)", paddingBottom: 16 }}>
                 {label}
               </a>
             ))}
